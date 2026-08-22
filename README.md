@@ -37,14 +37,20 @@ Processing runs server-side with live updates streamed over WebSockets, and the 
 
 ## 🛠️ Tech stack
 
-| Layer      | Technology                              |
-| ---------- | --------------------------------------- |
-| Backend    | Python 3.11, FastAPI                    |
-| ML models  | Madmom, Basic Pitch, Whisper, Essentia  |
-| Task queue | Celery                                  |
-| Frontend   | Vanilla JS (no framework, no build step)|
-| Storage    | Redis                                   |
-| Deploy     | Docker / Docker Compose, Caddy          |
+| Layer     | Technology                              |
+| ----------|--------------------------------------- |
+| Backend   | Python 3.11, FastAPI                  |
+| ML models | Madmom, Basic Pitch, Whisper, Essentia  |
+| Task queue| Celery                                  |
+| Frontend  | Vanilla JS (no framework, no build step)|
+| Storage   | Redis                                   |
+| Deploy    | Docker / Docker Compose, Caddy          |
+
+---
+
+## 🗂️ Project Board
+
+Track development progress, upcoming features, and task planning on our [GitHub Project Board](https://github.com/users/Esysc/projects/1).
 
 ---
 
