@@ -12,6 +12,7 @@ Upload an audio file or paste a YouTube / SoundCloud link, and get a complete mu
 
 - 🎵 **Chord detection** — hybrid of transformer and note-detection models plus a music-theory scoring layer, now covering extended chords (7ths, sus, add9) and modal keys (Dorian, Mixolydian)
 - 📝 **Smart transcription** — automatic instrumental detection so you get clean lyrics
+- 🎛️ **Stem separation** — isolate and download drums, bass, other instruments, and vocals, or run "Accurate + Stems" analysis for cleaner harmonic extraction
 - 🎹 **Interactive playback** — rolling chord display with real-time highlighting
 - 📦 **Multiple export formats** — classical partition, iReal Pro, guitar & bass tabs, MIDI, MusicXML
 - 🌍 **Multi-language support**
@@ -29,6 +30,7 @@ The app combines several approaches:
 - **BTC** (a bi-directional chord transformer) & **Basic Pitch** for audio → chord/note analysis
 - **Whisper** for lyrics and vocal transcription
 - **Essentia** for fast, optimized key detection
+- **Demucs** for optional source separation (drums, bass, other, vocals)
 - A custom **music-theory scoring** layer that validates chord extensions, resolves modal context, and turns raw detections into a musically meaningful result
 
 Processing runs server-side with live updates streamed over WebSockets, and the frontend is lightweight vanilla JavaScript with no build step.
@@ -40,7 +42,7 @@ Processing runs server-side with live updates streamed over WebSockets, and the 
 | Layer     | Technology                              |
 | ----------|--------------------------------------- |
 | Backend   | Python 3.11, FastAPI                  |
-| ML models | BTC, Basic Pitch, Whisper, Essentia    |
+| ML models | BTC, Basic Pitch, Whisper, Essentia, Demucs |
 | Task queue| Celery                                  |
 | Frontend  | Vanilla JS (no framework, no build step)|
 | Storage   | Redis                                   |
